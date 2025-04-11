@@ -1,0 +1,623 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbd9d9;
+}
+
+/* Header */
+header {
+    background-color: #f8ebcd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4CAF50;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+nav button {
+    padding: 5px 10px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    background-color: #dbd9d9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.hero-background {
+    background-image: url('images/india.webp');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h2 {
+    font-size: 24px;
+}
+
+.shop-now {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-now:hover {
+    background-color: #e64a19;
+}
+
+/* Sections */
+.featured-collections, .new-arrivals, .customer-say {
+    text-align: center;
+    margin: 20px;
+}
+
+.collection {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.collection-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collection-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.collection-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Products Section - Edited for 1 row, 4 columns */
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal width columns */
+    gap: 10px; /* Adjust gap between product items as needed */
+    width: 100%; /* Ensure the grid takes full width of its container */
+    max-width: 1200px; /* Optional: Limit the maximum width of the product grid */
+    margin: 20px auto; /* Center the grid horizontally */
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+
+.product {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.customer-say {
+    text-align: center;
+    margin: 20px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.review {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review:hover {
+    transform: scale(1.05);
+}
+
+/* Indian Collection Page Styles */
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dbd9d9;
+}
+
+/* Header */
+header {
+    background-color: #f8ebcd;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #000;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff5722;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+nav ul li a:hover::before {
+    width: 100%;
+}
+
+nav input[type="text"] {
+    padding: 8px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+nav button {
+    padding: 8px 15px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #e64a19;
+}
+
+/* Main Content Wrapper */
+.main-content {
+    background-color: #dbd9d9;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-content > section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin: 20px 0;
+    width: 100%; /* Make hero section full width */
+}
+
+.hero-background {
+    background-image: url('india.webp');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Make background full width */
+}
+
+.hero h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.shop-now {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.shop-now:hover {
+    background-color: #e64a19;
+}
+
+/* Featured Collections Section */
+.featured-collections {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.featured-collections h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.collection {
+    display: flex;
+    justify-content: center; /* Center the collection boxes */
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.collection-link {
+    text-decoration: none; /* Remove link underline */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.collection-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 200px; /* Adjust width as needed */
+    background-color: #fff;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.collection-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.collection-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.collection-box p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* New Arrivals Section & Indian/Western Collections */
+.new-arrivals,
+.indian-collection,
+.western-collection {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.new-arrivals h3,
+.indian-collection h2,
+.western-collection h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .indian-collection .product-grid,
+    .western-collection .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 8px;
+}
+
+.product-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+    height: 200px; /* Consistent image height */
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-item:hover img {
+    transform: scale(1.05);
+}
+
+.product-item h4 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.product-item .price {
+    color: green;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product-item .product-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.product-item .size-options,
+.product-item .color-options,
+.product-item .product-rating {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.product-item .size-options label,
+.product-item .color-options label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.product-item .size-options select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.product-item .color-options {
+    display: flex;
+    align-items: center;
+}
+
+.product-item .color-options label {
+    margin-right: 10px;
+}
+
+.product-item .color-option {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.product-item .color-option:hover {
+    transform: scale(1.1);
+}
+
+.product-item .product-rating span {
+    color: gold;
+}
+
+.product-item button.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.product-item button.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+/* Customer Say Section */
+.customer-say {
+    text-align: center;
+    margin: 40px 0;
+    background-color: #f9f9f9;
+    padding: 30px 20px;
+    width: 100%;
+}
+
+.customer-say h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.reviews {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.review {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 300px; /* Adjust width as needed */
+    background-color: #fff;
+    font-style: italic;
+    color: #666;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Footer Styles - Updated */
+.site-footer {
+    background-color: #fcebcf;
+    padding: 30px 20px;
+    font-family: 'Georgia', serif;
+    color: #000;
+    text-align: center; /* Center align for smaller screens */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 220px;
+    margin: 10px;
+    text-align: left; /* Left align text within sections */
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.footer-section p {
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a img {
+    width: 30px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+}
+
+/* Media Query for Footer Layout */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center; /* Center align sections on smaller screens */
+    }
+    .footer-section {
+        text-align: center; /* Center align text in sections on smaller screens */
+    }
+}
