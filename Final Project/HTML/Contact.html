@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> <!-- Character encoding for proper text display -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures the page is responsive -->
+    <meta name="description" content="This is The lyric Assignment"> <!-- Page description for search engines -->
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevents search engines from indexing this page -->
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="../CSS/Final.css">
+
+    <title>Contact Form | Indowest</title> <!-- Title for the page displayed in the browser tab -->
+
+    <!-- Google Fonts for custom typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=National+Park:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Site Header containing logo and navigation -->
+<header class="site-header">
+    <img src="/Final%20Project/Img/Indowest.png" alt="Indowest logo" class="logo-image"> <!-- Logo image -->
+    <div class="nav-wrapper">
+        <nav>
+            <ul>
+                <!-- Navigation Links -->
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li class="dropdown">
+                    <a>Clothing <span class="arrow">▼</span></a> <!-- Dropdown menu for clothing -->
+                    <ul class="dropdown-content">
+                        <li><a href="Shop.html">Shop all</a></li>
+                        <li><a href="Product.html">New products</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <button class="cart-icon">🛒</button> <!-- Shopping cart icon -->
+        </nav>
+    </div>
+</header>
+
+<!-- Multi-Step Form for Contact Information -->
+<div class="multi-step-form">
+    <form id="contactForm">
+        <!-- Step 1: User Name -->
+        <div class="form-step active" id="form-step1">
+            <h2>Step 1: Your Name</h2>
+            <!-- First Name Input -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+            <span class="error-message" id="firstNameError">Please enter your first name.</span> <!-- Error message -->
+
+            <!-- Last Name Input -->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+            <span class="error-message" id="lastNameError">Please enter your last name.</span> <!-- Error message -->
+
+            <div class="button-group">
+                <button type="button" class="next-btn">Next</button> <!-- Next button to proceed to next step -->
+            </div>
+        </div>
+
+        <!-- Step 2: Contact Information -->
+        <div class="form-step" id="form-step2">
+            <h2>Step 2: Contact Info</h2>
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="example@domain.com">
+            <span class="error-message" id="emailError">Please enter a valid email address.</span> <!-- Error message -->
+
+            <!-- Phone Number Input -->
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required placeholder="123-345-6789" pattern="^\d{3}-\d{3}-\d{4}$">
+            <span class="error-message" id="phoneError">Please enter a valid phone number (e.g., 123-345-6789).</span> <!-- Error message -->
+
+            <div class="button-group">
+                <button type="button" class="prev-btn">Back</button> <!-- Button to go back to previous step -->
+                <button type="button" class="next-btn">Next</button> <!-- Button to proceed to next step -->
+            </div>
+        </div>
+
+        <!-- Step 3: Confirm & Submit -->
+        <div class="form-step" id="form-step3">
+            <h2>Step 3: Confirm & Submit</h2>
+            <p>Please confirm your details before submitting.</p>
+            <div id="form-summary"></div> <!-- Summary of the user's input -->
+            <div class="button-group">
+                <button type="button" class="prev-btn">Back</button> <!-- Button to go back to previous step -->
+                <button type="submit">Submit</button> <!-- Submit button to send the form -->
+            </div>
+        </div>
+
+        <!-- Step Indicators (Visual progress for each form step) -->
+        <div class="step-indicators">
+            <span class="indicator active"></span> <!-- Active step indicator -->
+            <span class="indicator"></span> <!-- Inactive step indicator -->
+            <span class="indicator"></span> <!-- Inactive step indicator -->
+        </div>
+    </form>
+</div>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-content">
+        <img src="/Final%20Project/Img/Indowest.png" alt="Indowest logo" class="logo-image"> <!-- Logo image -->
+        <div class="footer-left">
+            <p>Fashion Fusion, Timeless Elegance.</p> <!-- Tagline -->
+            <p>Wear it, Feel it, Make it yours!</p> <!-- Tagline -->
+        </div>
+        <div class="footer-social">
+            <!-- Social Media Icons -->
+            <a><img src="/Final%20Project/Img/Facebook.png" alt="Facebook"></a>
+            <a><img src="/Final%20Project/Img/instagram.png" alt="Instagram"></a>
+            <a><img src="/Final%20Project/Img/Twitter.png" alt="Twitter"></a>
+        </div>
+        <div class="footer-partners">
+            <h5><strong>Partners</strong></h5>
+            <p>Canada</p> <!-- Partners (countries) -->
+            <p>India</p> <!-- Partners (countries) -->
+        </div>
+        <div class="footer-right">
+            <h5><strong>Get In Touch</strong></h5>
+            <p>Email: contact@indowest.com</p> <!-- Contact email -->
+            <p>Location: Canada & India</p> <!-- Locations -->
+            <p>Number: 705-123-4567</p> <!-- Contact phone number -->
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const nextButtons = document.querySelectorAll(".next-btn");
+        const prevButtons = document.querySelectorAll(".prev-btn");
+        const submitButton = document.querySelector('button[type="submit"]');
+
+        // Handle Next button click for each step
+        nextButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const currentStep = this.closest(".form-step");
+                const stepNumber = [...currentStep.parentElement.children].indexOf(currentStep) + 1;
+
+                if (validateStep(stepNumber)) {
+                    if (stepNumber === 2) {
+                        updateReviewDetails(); // Update review details on Step 2
+                    }
+                    showStep(stepNumber + 1);
+                    updateStepIndicators(stepNumber + 1);
+                }
+            });
+        });
+
+        // Handle Prev button click for each step
+        prevButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const currentStep = this.closest(".form-step");
+                const stepNumber = [...currentStep.parentElement.children].indexOf(currentStep) + 1;
+
+                showStep(stepNumber - 1);
+                updateStepIndicators(stepNumber - 1);
+            });
+        });
+
+        // Handle form submission
+        submitButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent form submission for validation
+            const formValid = validateStep(3); // Validate Step 3 before submitting
+            if (formValid) {
+                alert("Form submitted successfully!");
+            }
+        });
+
+        // Show the correct step
+        function showStep(step) {
+            const steps = document.querySelectorAll(".form-step");
+            steps.forEach((stepDiv, index) => {
+                stepDiv.classList.remove("active");
+                if (index + 1 === step) {
+                    stepDiv.classList.add("active");
+                }
+            });
+        }
+
+        // Update step indicators
+        function updateStepIndicators(activeStep) {
+            const indicators = document.querySelectorAll(".indicator");
+            indicators.forEach((indicator, index) => {
+                if (index < activeStep) {
+                    indicator.classList.add("active");
+                } else {
+                    indicator.classList.remove("active");
+                }
+            });
+        }
+
+        // Validate a specific step
+        function validateStep(step) {
+            let isValid = true;
+
+            if (step === 1) {
+                const firstName = document.getElementById("firstName");
+                const lastName = document.getElementById("lastName");
+
+                if (!firstName.value.trim()) {
+                    document.getElementById("firstNameError").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("firstNameError").style.display = "none";
+                }
+
+                if (!lastName.value.trim()) {
+                    document.getElementById("lastNameError").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("lastNameError").style.display = "none";
+                }
+            }
+
+            if (step === 2) {
+                const email = document.getElementById("email");
+                const phone = document.getElementById("phone");
+
+                const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+                if (!email.value.trim() || !emailPattern.test(email.value)) {
+                    document.getElementById("emailError").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("emailError").style.display = "none";
+                }
+
+                const phonePattern = /^\d{3}-\d{3}-\d{4}$/;
+                if (!phone.value.trim() || !phonePattern.test(phone.value)) {
+                    document.getElementById("phoneError").style.display = "block";
+                    isValid = false;
+                } else {
+                    document.getElementById("phoneError").style.display = "none";
+                }
+            }
+
+            return isValid;
+        }
+
+        // Update review details for Step 3
+        function updateReviewDetails() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            const reviewSummary = `
+            <h3>Review Your Details</h3>
+            <p><strong>First Name:</strong> ${firstName}</p>
+            <p><strong>Last Name:</strong> ${lastName}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+        `;
+
+            document.getElementById("form-summary").innerHTML = reviewSummary;
+        }
+    });
+</script>
+</body>
+</html>

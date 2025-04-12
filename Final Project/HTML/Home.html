@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags & Font Imports -->
+    <meta charset="utf-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive design -->
+    <meta name="description" content="This is The lyric Assignment"> <!-- Page description -->
+    <meta name="robots" content="noindex, nofollow"> <!-- Prevent search engines from indexing this page -->
+    <link rel="stylesheet" href="../CSS/Final.css"> <!-- Link to external CSS -->
+    <title>Indowest</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@...&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<!-- Site Header -->
+<header class="site-header">
+    <img src="/Final%20Project/Img/Indowest.png" alt="Indowest logo" class="logo-image">
+    <div class="nav-wrapper">
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li class="dropdown">
+                    <a>Clothing <span class="arrow">▼</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="Shop.html">Shop all</a></li>
+                        <li><a href="Product.html">New products</a></li>
+                    </ul>
+                </li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <button class="cart-icon">🛒</button> <!-- Cart Icon -->
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background">
+            <h2>Discover the fusion of Indian and Western Fashion</h2>
+            <a href="Shop.html" class="shop-now">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Collections Section -->
+    <section class="featured-collections">
+        <h3>Featured Collections</h3>
+        <div class="collection">
+            <!-- Indian Collection -->
+            <a href="Shop.html#indian-collection" class="collection-link">
+                <div class="collection-box">
+                    <img src="/Final%20Project/Img/indian%20coll.jpg" alt="Indian Collection" class="collection-image">
+                    <p>Indian Collection</p>
+                </div>
+            </a>
+            <!-- Western Collection -->
+            <a href="Shop.html#western-collection" class="collection-link">
+                <div class="collection-box">
+                    <img src="/Final%20Project/Img/western%20coll.jpg" alt="Western Collection" class="collection-image">
+                    <p>Western Collection</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- New Arrivals / Product Cards Section -->
+    <section class="new-arrivals">
+        <h3>New Arrivals</h3>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-item">
+                <img src="/Final%20Project/Img/kurta%20pajama.jpeg" alt="Men's Kurta Pajama">
+                <h4>Classic Kurta Pajama Set</h4>
+                <p class="price">$55</p>
+                <p class="product-description">
+                    A traditional and elegant kurta pajama set...
+                </p>
+                <!-- Size Options -->
+                <div class="size-options">
+                    <label for="size">Size:</label>
+                    <select id="size-kurta" name="size">
+                        <option value="small">Small</option>
+                        <option value="medium">Medium</option>
+                        <option value="large">Large</option>
+                        <option value="x-large">X-Large</option>
+                    </select>
+                </div>
+                <!-- Color Options -->
+                <div class="color-options">
+                    <label>Color:</label>
+                    <div class="color-option" style="background-color: beige;"></div>
+                    <div class="color-option" style="background-color: white;"></div>
+                    <div class="color-option" style="background-color: lightgoldenrodyellow;"></div>
+                </div>
+                <!-- Rating & Cart -->
+                <div class="product-rating">
+                    <span>⭐⭐⭐⭐☆ (4.6/5)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-item">
+                <img src="/Final%20Project/Img/salwar%20kamiz.jpeg" alt="Women's Salwar Kameez">
+                <h4>Vibrant Salwar Kameez Set</h4>
+                <p class="price">$65</p>
+                <p class="product-description">
+                    A beautiful and colorful salwar kameez set
+                </p>
+                <div class="size-options">
+                    <label for="size">Size:</label>
+                    <select id="size-salwar" name="size"> </select>
+                </div>
+                <div class="color-options">
+                    <label>Color:</label>
+                    <div class="color-option" style="background-color: orangered;"></div>
+                    <div class="color-option" style="background-color: gold;"></div>
+                    <div class="color-option" style="background-color: darkred;"></div>
+                </div>
+                <div class="product-rating">
+                    <span>⭐⭐⭐⭐⭐ (4.9/5)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-item">
+                <img src="/Final%20Project/Img/western%20men.jpeg" alt="Western Outfit">
+                <h4>Frontier Outfit</h4>
+                <p class="price">$85</p>
+                <p class="product-description">
+                    Embrace the spirit of the Old West...
+                </p>
+                <div class="size-options">
+                    <label for="size">Size:</label>
+                    <select id="size-frontier" name="size"> </select>
+                </div>
+                <div class="color-options">
+                    <label>Color:</label>
+                    <div class="color-option" style="background-color: brown;"></div>
+                    <div class="color-option" style="background-color: black;"></div>
+                </div>
+                <div class="product-rating">
+                    <span>⭐⭐⭐⭐☆ (4.5/5)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-item">
+                <img src="/Final%20Project/Img/western%20women.jpeg" alt="Western Dress">
+                <h4>Prairie Sunset Dress</h4>
+                <p class="price">$75</p>
+                <p class="product-description">
+                    Capture the beauty of the frontier
+                </p>
+                <div class="size-options">
+                    <label for="size">Size:</label>
+                    <select id="size" name="size"> </select>
+                </div>
+                <div class="color-options">
+                    <label>Color:</label>
+                    <div class="color-option" style="background-color: maroon;"></div>
+                </div>
+                <div class="product-rating">
+                    <span>⭐⭐⭐⭐☆ (4.8/5)</span>
+                </div>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- View More Button -->
+        <div class="view-more-container">
+            <a href="Product.html" class="view-more-button">View More</a>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="customer-say">
+        <h3>What Our Customers Say</h3>
+        <div class="reviews">
+            <div class="review">"Great Service!"</div>
+            <div class="review">"Love the designs!"</div>
+            <div class="review">"Fast shipping and excellent quality!"</div>
+            <div class="review">"Amazing selection of products!"</div>
+            <div class="review">"I will definitely shop here again!"</div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <img src="/Final%20Project/Img/Indowest.png" alt="Indowest logo" class="logo-image">
+
+            <!-- Slogan -->
+            <div class="footer-left">
+                <p>Fashion Fusion, Timeless Elegance.</p>
+                <p>Wear it, Feel it, Make it yours!</p>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-social">
+                <a href="#"><img src="/Final%20Project/Img/Facebook.png" alt="Facebook" ></a>
+                <a href="#"><img src="/Final%20Project/Img/instagram.png" alt="Instagram" ></a>
+                <a href="#"><img src="/Final%20Project/Img/Twitter.png" alt="Twitter" ></a>
+            </div>
+
+            <!-- Partner Locations -->
+            <div class="footer-partners">
+                <h5><strong>Partners</strong></h5>
+                <p>Canada</p>
+                <p>India</p>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-right">
+                <h5><strong>Get In Touch</strong></h5>
+                <p>Email: contact@indowest.com</p>
+                <p>Location: Canada & India</p>
+                <p>Number: 705-123-4567</p>
+            </div>
+        </div>
+    </footer>
+</main>
+</body>
+</html>
